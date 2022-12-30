@@ -98,7 +98,7 @@ body {
     border-bottom-left-radius: 70px;
 }
 
-.first-info-section, .sec-info-section, .sec-intro-section {
+.first-info-section, .sec-info-section, .sec-intro-section, .third-info-section {
     text-align: center;
     display: grid;
     gap: 1.5rem;
@@ -110,13 +110,13 @@ font-weight: 500;
 color: var(--color-VeryDarkBlue);
 }
 
-.sec-info-section > h1, .sec-intro-section > h2{
+.sec-info-section > h1, .sec-intro-section > h2, .third-info-section > h1{
     font-size: 1.5rem;
 font-weight: 500;
 color: var(--color-VeryDarkBlue);
 }
 
-.first-info-section > p, .sec-info-section > p, .sec-intro-section > p{
+.first-info-section > p, .sec-info-section > p, .sec-intro-section > p, .third-info-section > p, .version-text{
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;
@@ -129,7 +129,7 @@ color: var(--color-VeryDarkBlue);
     gap: 0.5rem;
 }
 
-.btn-crome, .btn-firefox{
+.btn-crome, .btn-firefox, .add-install{
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -137,7 +137,7 @@ color: var(--color-VeryDarkBlue);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btn-crome{
+.btn-crome, .add-install{
     background-color: var(--color-SoftBlue);
     color: white;
     font-weight: 500;
@@ -151,7 +151,7 @@ color: var(--color-VeryDarkBlue);
 }
 
 
-.btn-crome:active{
+.btn-crome:active, .add-install:active{
     background-color: inherit;
     border: 1px solid var(--color-SoftBlue);
     color: var(--color-SoftBlue);
@@ -173,6 +173,7 @@ color: var(--color-VeryDarkBlue);
     margin:  5rem 0;
     display: grid;
     gap: 5rem;
+    transition: ease-in 0.5s;
 }
 
 
@@ -220,7 +221,8 @@ color: var(--color-VeryDarkBlue);
 
   .tab-img-illustration{
     position:absolute;
-    bottom: 280px;
+    /* bottom: 400px; */
+    top: 1266px;
     left: 0;
     height: 220px;
     width: 300px;
@@ -230,7 +232,67 @@ color: var(--color-VeryDarkBlue);
     border-bottom-right-radius: 100px;
 }
 
-.sec-img_intro-section{
+.sec-img_intro-section, .extension-container{
+    display: grid;
+    gap: 4rem;
+   
+}
+
+.third-section{
+    display: grid;
+    gap: 5rem;
+    transition: ease-in 0.5s;
+}
+
+.extension-container{
+    justify-content: center;
+}
+
+.opera, .firefox, .chrome{
     display: grid;
     gap: 4rem;
 }
+
+.add-text{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-VeryDarkBlue);
+}
+
+.img-text, .extension-img {
+    display: grid;
+    gap:0.6rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-text-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.add-install{
+    padding: 1rem 3.5rem;
+}
+
+/* #faq-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .question-answer {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 10px;
+    transition: all 0.5s ease-out;
+  } */
