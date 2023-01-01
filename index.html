@@ -1,152 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- displays site properly based on user's device -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/favicon-32x32.png">
-            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <title>Frontend Mentor | Bookmark landing page</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header data-aos="fade-in">
+      <nav class="navigation">
+        <img src="./images/logo-bookmark.svg" alt="logo" />
+        <img src="./images/icon-hamburger.svg" alt="menu" />
+      </nav>
+    </header>
+    <main class="container">
+      <section class="first-section">
+        <div data-aos="fade-in" class="first-img-section">
+          <img
+            class="hero-img"
+            src="./images/illustration-hero.svg"
+            alt="hero-img"
+          />
+          <div class="svg-illustration"></div>
+        </div>
+        <div data-aos="fade-in" class="first-info-section">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="btn-container">
+            <button class="btn-crome">Get it on Chrome</button>
+            <button class="btn-firefox">Get it on Firefox</button>
+          </div>
+        </div>
+      </section>
 
-        <main  class="container">
-            <header data-aos="fade-in" >
-                <nav  class="navigation">
-                    <img src="./images/logo-bookmark.svg" alt="logo">
-                    <img src="./images/icon-hamburger.svg" alt="menu">
-                </nav>
-            </header>
+      <section class="sec-section">
+        <div data-aos="fade-in" class="sec-info-section">
+          <h1>Features</h1>
+          <p>
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+        </div>
+        <div data-aos="fade-in" class="sec-links-section">
+          <ul>
+            <li class="btn">Simple Bookmarking</li>
+            <li class="btn">Speedy Searching</li>
+            <li class="btn">Easy Sharing</li>
+          </ul>
+        </div>
 
-            <section  class="first-section">
-                <div   data-aos="fade-in" class="first-img-section">
-                    <img class="hero-img" src="./images/illustration-hero.svg" alt="hero-img">
-                    <div class="svg-illustration"></div>
-                </div>
-                <div  data-aos="fade-in" class="first-info-section">
-                    <h1>A Simple Bookmark Manager</h1>
-                    <p>
-                        A clean and simple interface to organize your favourite websites. Open a new
-                        browser tab and see your sites load instantly. Try it for free.
-                    </p> class="add-install"
-                    <div class="btn-container">
-                        <button class="btn-crome">Get it on Chrome</button>
-                        <button class="btn-firefox">Get it on Firefox</button>
-                    </div>
-                </div>
-            </section>
+        <div data-aos="fade-in" class="sec-img_intro-section">
+          <div class="sec-img-section"></div>
+          <div data-aos="fade-in" class="sec-intro-section">
+            <h2 class="sec-intro-h"></h2>
+            <p class="sec-intro-p"></p>
+          </div>
+        </div>
+      </section>
 
-            <section  class="sec-section">
-                <div   data-aos="fade-in" class="sec-info-section">
-                    <h1>Features</h1>
-                    <p>
-                        Our aim is to make it quick and easy for you to access your favourite websites.
-                        Your bookmarks sync between your devices so you can access them on the go.</p>
-                </div>
-                <div  data-aos="fade-in" class="sec-links-section">
-                    <ul>
-                        <li class="btn">Simple Bookmarking</li>
-                        <li class="btn">Speedy Searching</li>
-                        <li class="btn">Easy Sharing</li>
-                    </ul>
-                </div>
+      <section class="third-section">
+        <div data-aos="fade-in" class="third-info-section">
+          <h1>Download the extension</h1>
+          <p>
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
 
-                <div  data-aos="fade-in" class="sec-img_intro-section">
-                   
-                    <div class="sec-img-section"></div>
-                    <div  data-aos="fade-in" class="sec-intro-section">
-                        <h2 class="sec-intro-h"></h2>
-                        <p class="sec-intro-p"></p>
-                    </div>
-                </div>
-
-            </section >
-
-        <section class="third-section">
-       <div data-aos="fade-in"  class="third-info-section">
-        <h1>Download the extension</h1>
-        <p>
-            We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
-       </div>
-
-       <div class="extension-container">
-        <div class="chrome">
-<div class="img-text-container">
-  <div class="extension-img" >
-                <img src="./images/logo-chrome.svg" alt="chrome">
-            </div> 
-            <div class="img-text">
+        <div data-aos="fade-in" class="extension-container">
+          <div data-aos="fade-in" class="chrome">
+            <div class="img-text-container">
+              <div class="extension-img">
+                <img src="./images/logo-chrome.svg" alt="chrome" />
+              </div>
+              <div class="img-text">
                 <p class="add-text">Add to Chrome</p>
                 <p class="version-text">Minimum version 62</p>
-            </div>
-</div>
-<button class="add-install">Add & Install Extension</button>
-        </div>
-
-
-        <div class="firefox">
-<div class="img-text-container">
-               <div class="extension-img">
-           <img src="./images/logo-firefox.svg" alt="firefox">
-            </div> 
-            <div class="img-text">
-                <p class="add-text" >Add to Firefox</p>
-                <p class="version-text">Minimum version 55</p>
-            </div>
-</div>
- <button class="add-install">Add & Install Extension</button>
-        </div>
-
-
-        <div class="opera">
- <div class="img-text-container">
-            <div class="extension-img" >
-         <img src="./images/logo-opera.svg" alt="opera">
-            </div> 
-            <div class="img-text">
-                <p class="add-text" >Add to Opera</p>
-                <p class="version-text">Minimum version 46</p>               
-            </div>
- </div>           
- <button class="add-install">Add & Install Extension</button>
-        </div>
-
-        
-
-       </div>
-
-         </section>
-
-         <section class="faq-section">
-
-            <div id="faq-container">
-                <div class="question-answer">
-                  <h3 class="question">What is your return policy?</h3>
-                  <div class="answer">
-                    Our return policy allows customers to return items within 30 days of purchase for a full refund.
-                  </div>
-                </div>
-                <div class="question-answer">
-                  <h3 class="question">Do you offer free shipping?</h3>
-                  <div class="answer">
-                    Yes, we offer free standard shipping on all orders within the US.
-                  </div>
-                </div>
               </div>
-              
+            </div>
+            <button class="add-install">Add & Install Extension</button>
+          </div>
 
-         </section>
+          <div data-aos="fade-in" class="firefox">
+            <div class="img-text-container">
+              <div class="extension-img">
+                <img src="./images/logo-firefox.svg" alt="firefox" />
+              </div>
+              <div class="img-text">
+                <p class="add-text">Add to Firefox</p>
+                <p class="version-text">Minimum version 55</p>
+              </div>
+            </div>
+            <button class="add-install">Add & Install Extension</button>
+          </div>
 
-        </main>
-        <script src="app.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
-    </body>
+          <div data-aos="fade-in" class="opera">
+            <div class="img-text-container">
+              <div class="extension-img">
+                <img src="./images/logo-opera.svg" alt="opera" />
+              </div>
+              <div class="img-text">
+                <p class="add-text">Add to Opera</p>
+                <p class="version-text">Minimum version 46</p>
+              </div>
+            </div>
+            <button class="add-install">Add & Install Extension</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="faq-secton-text">
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            What is Bookmark ?
+            <img
+              class="arrow-icon"
+              src="./images/icon-arrow.svg"
+              alt="arrow-icon"
+            />
+          </button>
+          <div class="content">
+            <p class="faq-p-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </p>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <button class="toggle">
+            How can I request a new browser ?
+            <img
+              class="arrow-icon"
+              src="./images/icon-arrow.svg"
+              alt="arrow-icon"
+            />
+          </button>
+          <div class="content">
+            <p class="faq-p-text">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <button class="toggle">
+            Is there a mobile app ?
+            <img
+              class="arrow-icon"
+              src="./images/icon-arrow.svg"
+              alt="arrow-icon"
+            />
+          </button>
+          <div class="content">
+            <p class="faq-p-text">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <button class="toggle">
+            What about other Chromium browsers ?
+            <img
+              class="arrow-icon"
+              src="./images/icon-arrow.svg"
+              alt="arrow-icon"
+            />
+          </button>
+          <div class="content">
+            <p class="faq-p-text">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- More Info
+
+        35,000+ already joined
+      
+        Stay up-to-date with what we’re doing
+      
+        Contact Us
+      
+        Features
+        Pricing
+        Contact -->
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
