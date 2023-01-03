@@ -18,9 +18,40 @@
     <header data-aos="fade-in">
       <nav class="navigation">
         <img src="./images/logo-bookmark.svg" alt="logo" />
-        <img src="./images/icon-hamburger.svg" alt="menu" />
+        <img class="open" src="./images/icon-hamburger.svg" alt="open-menu" />
       </nav>
     </header>
+
+
+    <aside class="side-menu">
+
+  <div class="side-menu-container">
+         <nav class=" side-menu-navigation">
+        <img src="./images/side-logo-bookmark.svg" alt="logo" />
+        <img class="close" src="./images/icon-close.svg" alt="close-menu" />
+      </nav>
+      
+      <div class="side-menu-list-container">
+        <ul class="side-menu-list" >
+          <li> <a href="#">Features</a> </li>
+          <li> <a href="#">Pricing</a> </li>
+          <li> <a href="#">Contact</a> </li>
+          <li> <button>login</button> </li>
+        </ul>
+      </div>
+      
+      <div class="side-social-img">
+        <ul  class="side-social-menu" >
+          <li> <img src="./images/icon-facebook.svg" alt="facebook"> </li>
+          <li> <img src="./images/icon-twitter.svg" alt="twitter"> </li>
+        </ul>
+      </div>
+       
+  </div>
+
+      
+            </aside>
+
     <main class="container">
       <section class="first-section">
         <div data-aos="fade-in" class="first-img-section">
@@ -130,14 +161,11 @@
             like answered please feel free to email us.
           </p>
         </div>
-        <div class="wrapper">
+<div class="wrapper-container">
+          <div class="wrapper">
           <button class="toggle">
             What is Bookmark ?
-            <img
-              class="arrow-icon"
-              src="./images/icon-arrow.svg"
-              alt="arrow-icon"
-            />
+            <ion-icon   class="arrow-icon"  name="chevron-down-outline"></ion-icon>
           </button>
           <div class="content">
             <p class="faq-p-text">
@@ -151,11 +179,7 @@
         <div class="wrapper">
           <button class="toggle">
             How can I request a new browser ?
-            <img
-              class="arrow-icon"
-              src="./images/icon-arrow.svg"
-              alt="arrow-icon"
-            />
+            <ion-icon   class="arrow-icon"  name="chevron-down-outline"></ion-icon>
           </button>
           <div class="content">
             <p class="faq-p-text">
@@ -172,11 +196,7 @@
         <div class="wrapper">
           <button class="toggle">
             Is there a mobile app ?
-            <img
-              class="arrow-icon"
-              src="./images/icon-arrow.svg"
-              alt="arrow-icon"
-            />
+            <ion-icon   class="arrow-icon"  name="chevron-down-outline"></ion-icon>
           </button>
           <div class="content">
             <p class="faq-p-text">
@@ -191,11 +211,7 @@
         <div class="wrapper">
           <button class="toggle">
             What about other Chromium browsers ?
-            <img
-              class="arrow-icon"
-              src="./images/icon-arrow.svg"
-              alt="arrow-icon"
-            />
+            <ion-icon   class="arrow-icon"  name="chevron-down-outline"></ion-icon>
           </button>
           <div class="content">
             <p class="faq-p-text">
@@ -205,25 +221,62 @@
             </p>
           </div>
         </div>
+</div>
+
+<button class="more-Info">More Info</button>
+
+
       </section>
     </main>
 
-    <!-- More Info
+        <footer>
+<div class="footer-first-section">
+<div class="footer-text-container">
+<p class="footer-first-section-first-text" > 35,000+ already joined</p>
+<p class="footer-first-section-sec-text" >Stay up-to-date with what we’re doing</p>
+</div>
 
-        35,000+ already joined
-      
-        Stay up-to-date with what we’re doing
-      
-        Contact Us
-      
-        Features
-        Pricing
-        Contact -->
+<form id="form" name="form1">
+  <!-- <label for="email">Enter your email:</label> -->
+<div class="input-container">
+    <input  type="text" name="text1" id="input" placeholder=" Email your Address" type="email" id="email" name="email">
+    <div class="error-msg">
+      <p>whoops, make sure it's an email</p>
+    </div>
+  <img class="error" src="./images/icon-error.svg" alt="">
+</div>
+
+
+  <!-- <input > -->
+  <button class="submit" type="submit"> Contact Us</button>
+</form>
+</div>
+<div class="footer-sec-section">
+<div class="logo-socials">
+  <img src="./images/footer-logo-bookmark.svg" alt="">
+  <ul class="menu" >
+    <li>Features</li>
+    <li>Pricing</li>
+    <li>Contact</li>
+  </ul>
+</div>
+<div class="social-img">
+  <ul  class="social-menu" >
+    <li> <img src="./images/icon-facebook.svg" alt=""> </li>
+    <li> <img src="./images/icon-twitter.svg" alt=""> </li>
+  </ul>
+</div>
+</div>
+        </footer>
+
+
 
     <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

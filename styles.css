@@ -151,9 +151,96 @@
  body {
      font-family: 'Rubik', sans-serif;
      line-height: 1;
-     padding: 2rem;
+     /* padding: 2rem; */
      position: relative;
  }
+
+ header, main{
+    padding: 2rem;
+ }
+
+ .side-menu{
+    position:fixed;
+   background-color: var(--color-VeryDarkBlue);
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    transform: scale(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+}
+
+.open-side-menu{
+    transform: scale(1);
+}
+
+.side-menu-container{
+    padding: 2rem;
+}
+
+.side-menu-navigation{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 0 3rem 0;
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.342);
+}
+
+
+.side-menu-list{
+    display: grid;
+    /* justify-content: center; */
+   
+}
+
+.side-menu-list > li{
+    letter-spacing: 1.1px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.336);
+    padding:1.5rem 0;
+}
+
+.side-menu-list > li > a{
+    text-decoration: none;
+     color: white;
+}
+
+.side-menu-list > li:nth-last-child(1){
+    border-bottom: none;
+}
+
+.side-menu-list > li > button{
+    letter-spacing: 1.1px;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    background-color: inherit;
+    padding: 1.1rem;
+    width: 100%;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.side-menu-list-container{
+    margin-bottom: 10rem;
+}
+
+.side-social-img{
+    display: grid;
+    justify-content: center;
+}
+
+.side-social-menu{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 
  .navigation {
      justify-content: space-between;
@@ -234,7 +321,8 @@
 
  .btn-crome,
  .btn-firefox,
- .add-install {
+ .add-install,
+ .more-Info {
      width: 100%;
      border: none;
      border-radius: 5px;
@@ -243,7 +331,8 @@
  }
 
  .btn-crome,
- .add-install {
+ .add-install, 
+ .more-Info {
      background-color: var(--color-SoftBlue);
      color: white;
      font-weight: 500;
@@ -258,7 +347,8 @@
 
 
  .btn-crome:active,
- .add-install:active {
+ .add-install:active,
+ .more-Info:active {
      background-color: inherit;
      border: 1px solid var(--color-SoftBlue);
      color: var(--color-SoftBlue);
@@ -277,7 +367,6 @@
 
 
  .sec-section {
-     /* margin:  5rem 0; */
      display: grid;
      gap: 5rem;
      transition: ease-in 0.5s;
@@ -328,7 +417,6 @@
 
  .tab-img-illustration {
      position: absolute;
-     /* bottom: 400px; */
      top: 1266px;
      left: 0;
      height: 220px;
@@ -381,6 +469,12 @@
  .faq-section {
      display: grid;
      gap: 2rem;
+     justify-items: center;
+ }
+
+ .wrapper-container{
+    display: grid;
+    gap: 1rem;
  }
 
  .add-install {
@@ -391,6 +485,7 @@
      text-align: center;
      display: grid;
      gap: 1rem;
+     
  }
 
  .toggle {
@@ -421,8 +516,147 @@
  .rotate-arrow-icon {
      transform: rotate(-180deg);
      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+     color: var(--color-SoftRed);
  }
 
  .arrow-icon {
      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
  }
+
+ ion-icon {
+    font-size: 1.6rem;
+    color: #5267DF;
+    stroke-width: 3px;
+    --ionicon-stroke-width: 16px;
+  }
+
+  .more-Info{
+    width: 100px;
+  }
+
+
+  /* FOOTER */
+  .footer-first-section{
+    background-color: var(--color-SoftBlue);
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+  .footer-text-container{
+    display: grid;
+    gap: 1rem;
+  }
+
+  .footer-first-section-first-text{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .footer-first-section-sec-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  form{
+    position: relative;
+    display: grid;
+    gap: 1.1rem;
+  }
+
+.error {
+    position: absolute;
+    top: 18px;
+    padding-right: 1rem;
+    display: none;
+}
+
+
+.error-msg {
+    font-style: italic; 
+    text-align: left;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-SoftRed);
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-msg > p{
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.show-error, .show-error-msg{
+    display: block;
+}
+
+.input-container {
+    display: flex;
+    justify-content: end;
+}
+
+.input-container > input{
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+
+  form >  button{
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-SoftRed);
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+  }
+
+
+  form >  button:active {
+    background-color: inherit;
+    border: 1px solid var(--color-VeryDarkBlue);
+    color: var(--color-VeryDarkBlue);
+    font-weight: 500;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.footer-sec-section{
+    background-color: var(--color-VeryDarkBlue);
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+
+  .logo-socials, .menu{
+    display: grid;
+    gap:2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .social-img{
+    display: grid;
+    justify-content: center;
+  }
+
+  .social-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

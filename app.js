@@ -6,7 +6,13 @@ const toggle = document.querySelectorAll('.toggle');
 const content = document.querySelectorAll('.content');
 const arrowIcon = document.querySelectorAll('.arrow-icon');
 const faqPText = document.querySelectorAll('.faq-p-text');
-
+const From = document.getElementById('form');
+const Input = document.getElementById('input');
+const error = document.querySelector('.error');
+const errorMsg = document.querySelector('.error-msg');
+const open = document.querySelector('.open');
+const close = document.querySelector('.close');
+const sideMenu = document.querySelector('.side-menu')
 window.addEventListener("load", () => {
 
     secImg.innerHTML = `
@@ -58,10 +64,9 @@ toggle.forEach((btn, i) => {
     btn.addEventListener("click", () => {
         if (parseInt(content[i].style.height) != content[i].scrollHeight) {
             content[i].style.height = content[1].scrollHeight + "px"
-            if (faqPText[i].textContent.length <= 200) {
+            if (faqPText[i].textContent.length <= 250) {
                 content[i].style.height = content[1].scrollHeight - 70 + "px"
             }
-            console.log(faqPText[i].textContent.length)
             arrowIcon[i].classList.add('rotate-arrow-icon')
         } else {
             content[i].style.height = "0px"
@@ -70,3 +75,34 @@ toggle.forEach((btn, i) => {
     })
 })
 
+From.addEventListener("submit", (e)=>{
+
+    e.preventDefault();
+
+   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(!Input.value.match(mailformat)){
+        error.classList.add('show-error');  
+        errorMsg.classList.add('show-error-msg');  
+        Input.style.border = "2px solid #fa5757"
+        From.style.gap="2.1rem"
+    return true;
+    }
+    else {
+        error.classList.remove('show-error');  
+        errorMsg.classList.remove('show-error-msg');  
+        Input.style.border = "none"
+        From.style.gap="1.1rem"
+    return false;
+    }
+    
+    });
+    
+
+open.addEventListener("click", () => { 
+ sideMenu.classList.add('open-side-menu')
+ close.addEventListener("click", () => {
+ sideMenu.classList.remove('open-side-menu')
+
+  })
+})
