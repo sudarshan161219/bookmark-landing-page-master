@@ -10,9 +10,10 @@ const From = document.getElementById('form');
 const Input = document.getElementById('input');
 const error = document.querySelector('.error');
 const errorMsg = document.querySelector('.error-msg');
+const errorText = document.querySelector('.error-msg-text');
 const open = document.querySelector('.open');
 const close = document.querySelector('.close');
-const sideMenu = document.querySelector('.side-menu')
+const sideMenu = document.querySelector('.side-menu');
 window.addEventListener("load", () => {
 
     secImg.innerHTML = `
@@ -60,7 +61,7 @@ links.forEach((link) => {
     })
 })
 
-console.log(window.innerWidth)
+
 
 toggle.forEach((btn, i) => {
     btn.addEventListener("click", () => {
@@ -93,6 +94,10 @@ From.addEventListener("submit", (e) => {
         errorMsg.classList.add('show-error-msg');
         Input.style.border = "2px solid #fa5757"
         From.style.gap = "2.1rem"
+        if(Input.value === ''){
+            errorText .textContent = "Please Enter Your Email"
+            return
+        }
         return true;
     }
     else {
