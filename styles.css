@@ -352,7 +352,7 @@
  .add-install:active,
  .more-Info:active {
      background-color: inherit;
-     border: 1px solid var(--color-SoftBlue);
+     outline: 1px solid var(--color-SoftBlue);
      color: var(--color-SoftBlue);
      font-weight: 500;
      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
@@ -361,7 +361,7 @@
 
  .btn-firefox:active {
      background-color: inherit;
-     border: 1px solid var(--color-VeryDarkBlue);
+     outline: 1px solid var(--color-VeryDarkBlue);
      color: var(--color-VeryDarkBlue);
      font-weight: 500;
      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
@@ -574,7 +574,7 @@
  form {
      position: relative;
      display: grid;
-     gap: 1.1rem;
+     gap: 2.1rem;
  }
 
  .error {
@@ -589,18 +589,20 @@
      font-style: italic;
      text-align: left;
      position: absolute;
-     top: 55px;
+     top: 58px;
      left: 0;
      width: 100%;
      background-color: var(--color-SoftRed);
      margin-bottom: 1rem;
      display: none;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
  }
 
  .error-msg>p {
      font-size: 0.7rem;
      font-weight: 500;
-     padding: 0.5rem;
+     padding: 0.2rem;
  }
 
  .show-error,
@@ -608,12 +610,18 @@
      display: block;
  }
 
+
+
  .input-container {
      display: flex;
      justify-content: end;
  }
 
  .input-container>input {
+    font-size: 1.1rem;
+    color: var(--color-VeryDarkBlue);
+    font-weight: 400;
+    letter-spacing: 1.1px;
      width: 100%;
      padding: 1.2rem;
      border: none;
@@ -621,6 +629,9 @@
      border-radius: 5px;
  }
 
+ .input-container>input::placeholder{
+    color: var(--color-GrayishBlue);
+ }
 
  form>button {
      padding: 1.2rem;
@@ -634,11 +645,11 @@
  }
 
 
- form>button:active {
+ form > button:active {
+   transform: scale(0.95);
      background-color: inherit;
-     border: 1px solid var(--color-VeryDarkBlue);
+     outline: 1px solid var(--color-VeryDarkBlue);
      color: var(--color-VeryDarkBlue);
-     font-weight: 500;
      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
  }
 
@@ -722,6 +733,10 @@
         flex-direction: column;
         display: flex;
         align-items: center;
+    }
+
+    .side-menu {
+        display: none;
     }
 
     header{
@@ -873,10 +888,79 @@ footer{
 
 form{
     display: flex;
+    gap: 1.1rem;
 }
 
 .input-container{
     width: 70%;
+}
+
+.error-msg {
+    width: 313px;
+}
+
+button, .sec-links-section>ul>li {
+    cursor: pointer;
+}
+
+.input-container>input {
+    padding: 1rem 1.1rem;
+}
+
+
+}
+
+@media (min-width: 1336px){
+.navigation {
+    padding: 0 8rem;
+}
+
+.container {
+    width: 1100px;
+}
+
+
+.svg-illustration {
+    top: 304px;
+    height: 300px;
+    width: 540px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+}
+
+.hero-img, .tab-img {
+    width: 551px;
+}
+
+.first-section {
+    gap: 4rem;
+}
+
+.sec-info-section, .sec-links-section, .third-info-section {
+    padding: 0 15rem;
+}
+
+.faq-section {
+    padding: 0 15rem;
+}
+
+
+.tab-img-illustration, .tab-img-illustration-two, .tab-img-illustration-three {
+    top: 1055px;
+    height: 350px;
+    width: 650px;
+}
+
+.tab-img-illustration-two{
+    top: 1140px;
+}
+
+.tab-img-illustration-three{
+    top: 1150px;
+}
+
+.footer-sec-section {
+    padding: 1.5rem 3rem;
 }
 
 }

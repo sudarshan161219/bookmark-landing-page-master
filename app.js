@@ -14,6 +14,9 @@ const errorText = document.querySelector('.error-msg-text');
 const open = document.querySelector('.open');
 const close = document.querySelector('.close');
 const sideMenu = document.querySelector('.side-menu');
+const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
 window.addEventListener("load", () => {
 
     secImg.innerHTML = `
@@ -84,32 +87,23 @@ toggle.forEach((btn, i) => {
 })
 
 From.addEventListener("submit", (e) => {
-
     e.preventDefault();
-
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
     if (!Input.value.match(mailformat)) {
         error.classList.add('show-error');
         errorMsg.classList.add('show-error-msg');
         Input.style.border = "2px solid #fa5757"
-        From.style.gap = "2.1rem"
-        if(Input.value === ''){
+     if(Input.value === ''){
             errorText .textContent = "Please Enter Your Email"
-            return
         }
-        return true;
     }
     else {
         error.classList.remove('show-error');
         errorMsg.classList.remove('show-error-msg');
         Input.style.border = "none"
-        From.style.gap = "1.1rem"
-        return false;
+        // From.style.gap = "1.1rem"
     }
 
 });
-
 
 open.addEventListener("click", () => {
     sideMenu.classList.add('open-side-menu')
